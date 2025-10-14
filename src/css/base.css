@@ -10,8 +10,6 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;
   margin-left: 156px;
@@ -27,6 +25,9 @@ font-family: Montserrat;
   letter-spacing: 4%;
   border-radius: 4px;
   padding: 8px 16px;
+}
+input #datatime-picker{
+  width: 272px;
 }
 input:active{
   border: 1px solid #4E75FF;
