@@ -4,9 +4,9 @@ const form = document.querySelector('.form');
 form.addEventListener('submit', event => {
     event.preventDefault();
 const delayInput = form.querySelector('[name="delay"]');
-const stateInput = form.querySelector('[name="state"]');
+const stateInput = form.querySelector('[name="state"]:checked');
 const delay = Number(delayInput.value);
-const state = stateInput.value;
+ const state = stateInput ? stateInput.value : null;
 
     if (isNaN(delay) || delay < 0) {
         iziToast.error({

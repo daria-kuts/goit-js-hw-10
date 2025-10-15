@@ -20,7 +20,7 @@ const options = {
         if (selectedDates[0] < new Date()) {
             iziToast.error({
   title: 'Error',
-  message: 'Illegal operation',
+  message: 'Please choose a date in the future',
   position: 'topRight',
 });
             startBtn.disabled = true;
@@ -45,7 +45,8 @@ function clickStart(event) {
         if (diff <= 0) {
             timerDisplay(0);
             startBtn.disabled = true;
-            timerInput.disabled = false;
+          timerInput.disabled = false;
+          clearInterval()
             return;
         }
         timerDisplay(diff);
